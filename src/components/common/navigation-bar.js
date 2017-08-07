@@ -1,38 +1,44 @@
 /******************************************************************
-* Author: Anuj Parikh
-* Description: Component for Navigation Bar
-* Type: React Functional Component
-*******************************************************************/
+ * Author: Anuj Parikh
+ * Description: Component for Navigation Bar
+ * Type: React Functional Component
+ *******************************************************************/
 
 /* Dependency Imports */
 import React from 'react';
+import {
+    Navbar,
+    Nav,
+    NavItem,
+    NavDropdown,
+    MenuItem
+} from 'react-bootstrap';
 
 const NavigationBar = () => {
     return (
-        <nav className="navbar navbar-default">
-            <div className="container-fluid">
-                <div className="navbar-header">
-                    <button type="button" className="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false"
-                    >
-                        <span className="sr-only">Toggle navigation</span>
-                        <span className="icon-bar" />
-                        <span className="icon-bar" />
-                        <span className="icon-bar" />
-                    </button>
-                    <a className="navbar-brand" href="#">Brand</a>
-                </div>
-                <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul className="nav navbar-nav">
-                        <li className="active"><a href="#">Roles <span className="sr-only">(current)</span></a></li>
-                        <li><a href="#">Access</a></li>
-                    </ul>
-                    <ul className="nav navbar-nav navbar-right">
-                        <li><a href="#">User Name</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <Navbar fluid collapseOnSelect>
+            <Navbar.Header>
+                <Navbar.Brand>
+                    <a href="#">Brand Name</a>
+                </Navbar.Brand>
+                <Navbar.Toggle />
+            </Navbar.Header>
+            <Navbar.Collapse>
+                <Nav>
+                    <NavItem eventKey={1} href="#">Home</NavItem>
+                    <NavItem eventKey={2} href="#">Users</NavItem>
+                    <NavItem eventKey={2} href="#">Roles</NavItem>
+                </Nav>
+                <Nav pullRight className="c-mr-md">
+                    <NavDropdown eventKey={3} title="User Name" id="user-name-dropdown">
+                        <MenuItem eventKey={3.1}>Action #1</MenuItem>
+                        <MenuItem eventKey={3.2}>Action #2</MenuItem>
+                        <MenuItem divider />
+                        <MenuItem eventKey={3.4}>Logout</MenuItem>
+                    </NavDropdown>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
     );
 };
 

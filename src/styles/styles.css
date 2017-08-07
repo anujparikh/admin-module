@@ -1,11 +1,23 @@
 .c-mt-sm {
-    margin-top: 0.6rem;
+    margin-top: 0.6rem !important;
 }
 
 .c-mt-md {
-    margin-top: 0.9rem;
+    margin-top: 0.9rem !important;
 }
 
 .c-mt-lg {
-    margin-top: 1.2rem;
+    margin-top: 1.2rem !important;
+}
+
+.c-mr-sm {
+    margin-right: 0.6rem !important;
+}
+
+.c-mr-md {
+    margin-right: 0.9rem !important;
+}
+
+.c-mr-lg {
+    margin-right: 1.2rem !important;
 }
