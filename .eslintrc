@@ -20,7 +20,10 @@
     "mocha": true
   },
   "rules": {
-    "quotes": ["error", "single"],
+    "quotes": [
+      "error",
+      "single"
+    ],
     "no-console": [
       "error",
       {
@@ -55,6 +58,38 @@
     "jsx-quotes": [
       "error",
       "prefer-double"
-    ]
+    ],
+    "no-multi-spaces": "error",
+    "react/no-multi-comp": 2,
+    "react/prefer-es6-class": [
+      2,
+      "always"
+    ],
+    "react/prefer-stateless-function": [
+      2,
+      {
+        "ignorePureComponents": true
+      }
+    ],
+    "react/jsx-closing-bracket-location": 1,
+    "react/jsx-tag-spacing": [
+      2,
+      {
+        "closingSlash": "never",
+        "beforeSelfClosing": "always",
+        "afterOpening": "never"
+      }
+    ],
+    "react/jsx-curly-spacing": [
+      2,
+      {
+        "when": "never",
+        "allowMultiline": false
+      }
+    ],
+    "react/jsx-wrap-multilines": 2,
+    "react/self-closing-comp": "error",
+    "react/jsx-no-bind": 2,
+    "react/require-render-return": 2
   }
 }
