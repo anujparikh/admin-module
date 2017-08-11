@@ -9,6 +9,7 @@ import React from 'react';
 
 /* Custom Imports */
 import Nav from './common/navigation-bar';
+import 'typeface-roboto';
 
 const Root = () => (
     <div className="container-fluid c-mt-lg">
