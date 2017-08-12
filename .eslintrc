@@ -5,6 +5,7 @@
     "plugin:import/warnings",
     "plugin:react/recommended"
   ],
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
@@ -76,7 +77,7 @@
       2,
       {
         "closingSlash": "never",
-        "beforeSelfClosing": "always",
+        "beforeSelfClosing": "never",
         "afterOpening": "never"
       }
     ],
