@@ -21,7 +21,7 @@ const NavigationBar = () => {
                 <Navbar.Brand>
                     <a href="#">Brand Name</a>
                 </Navbar.Brand>
-                <Navbar.Toggle />
+                <Navbar.Toggle/>
             </Navbar.Header>
             <Navbar.Collapse>
                 <Nav>
@@ -33,7 +33,7 @@ const NavigationBar = () => {
                     <NavDropdown eventKey={3} title="User Name" id="user-name-dropdown">
                         <MenuItem eventKey={3.1}>Action #1</MenuItem>
                         <MenuItem eventKey={3.2}>Action #2</MenuItem>
-                        <MenuItem divider />
+                        <MenuItem divider/>
                         <MenuItem eventKey={3.4}>Logout</MenuItem>
                     </NavDropdown>
                 </Nav>

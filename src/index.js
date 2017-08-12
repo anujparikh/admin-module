@@ -20,7 +20,7 @@ class Index {
     constructor() {
         render(
             <AppContainer>
-                <Root />
+                <Root/>
             </AppContainer>,
             document.getElementById('react-root')
         );
@@ -30,7 +30,7 @@ class Index {
                 const NewRoot = require('./components/root').default;
                 render(
                     <AppContainer>
-                        <NewRoot />
+                        <NewRoot/>
                     </AppContainer>,
                     document.getElementById('react-root')
                 );
