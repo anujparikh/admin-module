@@ -14,7 +14,9 @@ import Tabs, { Tab } from 'material-ui/Tabs';
 import PersonAdd from 'material-ui-icons/PersonAdd';
 import VerifiedUser from 'material-ui-icons/VerifiedUser';
 
+/* Custom Imports */
 import Login from './login';
+import Signup from './signup';
 
 const styleSheet = createStyleSheet(theme => ({
     labelContainer: {
@@ -60,9 +62,9 @@ class LoginContainer extends Component {
                         </Tabs>
                     </AppBar>
                     {this.state.index === 0 &&
-                    <Login>
-                        {'Item One'}
-                    </Login>}
+                    <Login/>}
+                    {this.state.index === 1 &&
+                    <Signup/>}
                 </Grid>
             </Grid>
         );
