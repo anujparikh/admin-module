@@ -12,7 +12,7 @@ import Login from './Login/login-container';
 import 'typeface-roboto';
 
 const Root = () => (
-    <div className="container-fluid c-mt-lg">
+    <div>
         <Login/>
     </div>
 );
