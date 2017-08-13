@@ -55,6 +55,13 @@ const Signup = (props) => {
                     className={props.classes.input}
                     required
                     id="required"
+                    label="Username"
+                    margin="dense"
+                />
+                <TextField
+                    className={props.classes.input}
+                    required
+                    id="required"
                     label="Email"
                     type="email"
                     margin="dense"
