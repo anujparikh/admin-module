@@ -26,7 +26,7 @@ const styleSheet = createStyleSheet(theme => ({
     card: {
         width: '40%',
         marginLeft: '30%',
-        marginTop: '10%'
+        marginTop: '7%'
     },
     cardContainer: {
         textAlign: 'center'

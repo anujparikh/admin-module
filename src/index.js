@@ -13,7 +13,6 @@ import { AppContainer } from 'react-hot-loader';
 
 /* Custom Imports */
 import './styles/styles.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Root from './components/root';
 
 class Index {
