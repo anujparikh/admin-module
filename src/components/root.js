@@ -8,12 +8,12 @@
 import React from 'react';
 
 /* Custom Imports */
-import AdminNavBar from './common/admin-navbar';
+import Login from './login/login-container';
 import 'typeface-roboto';
 
 const Root = () => (
     <div>
-        <AdminNavBar/>
+        <Login/>
     </div>
 );
 
