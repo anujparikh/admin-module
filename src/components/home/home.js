@@ -1,6 +1,6 @@
 /******************************************************************
  * Author: Anuj Parikh
- * Description: Admin navigation bar Component
+ * Description: Application Home Component
  * Type: React Class Component
  *******************************************************************/
 
@@ -10,13 +10,12 @@ import React from 'react';
 /* Custom Imports */
 import AdminNavBar from './../common/admin-navbar';
 
-const Roles = () => {
+const Home = () => {
     return (
         <div>
             <AdminNavBar/>
-            Roles
         </div>
     );
 };
 
-export default Roles;
+export default Home;

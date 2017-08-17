@@ -13,6 +13,7 @@ import Settings from 'material-ui-icons/Settings';
 import Drawer from 'material-ui/Drawer';
 import Button from 'material-ui/Button';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
+import { Redirect } from 'react-router-dom';
 
 const styleSheet = createStyleSheet({
     list: {
@@ -30,29 +31,48 @@ class AdminNavBar extends Component {
     state = {
         open: {
             left: false
-        }
+        },
+        usersRedirect: false,
+        rolesRedirect: false
     };
 
     toggleDrawer = (side, open) => {
         const drawerState = {};
         drawerState[side] = open;
-        this.setState({open: drawerState});
+        this.setState({
+            open: drawerState,
+            usersRedirect: this.state.usersRedirect,
+            rolesRedirect: this.state.rolesRedirect
+        });
     };
 
     handleLeftOpen = () => this.toggleDrawer('left', true);
     handleLeftClose = () => this.toggleDrawer('left', false);
 
+    handleClick = (key) => {
+        let tempState = this.state;
+        tempState[key] = true;
+        this.setState(tempState);
+    };
+
     render() {
+        if (this.state.usersRedirect) {
+            return <Redirect push to="/users"/>;
+        }
+
+        if (this.state.rolesRedirect) {
+            return <Redirect push to="/roles"/>;
+        }
 
         const navigationListItems = (
             <div>
-                <ListItem button>
+                <ListItem button onClick={() => this.handleClick('usersRedirect')}>
                     <ListItemIcon>
                         <People/>
                     </ListItemIcon>
                     <ListItemText primary="Users"/>
                 </ListItem>
-                <ListItem button>
+                <ListItem button onClick={() => this.handleClick('rolesRedirect')}>
                     <ListItemIcon>
                         <Settings/>
                     </ListItemIcon>
@@ -75,7 +95,6 @@ class AdminNavBar extends Component {
                 <Drawer
                     open={this.state.open.left}
                     onRequestClose={this.handleLeftClose}
-                    onClick={this.handleLeftClose}
                 >
                     {navigationList}
                 </Drawer>

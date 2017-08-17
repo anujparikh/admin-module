@@ -8,12 +8,12 @@
 import React from 'react';
 
 /* Custom Imports */
-import Login from './login/login-container';
+import Routes from './routes';
 import 'typeface-roboto';
 
 const Root = () => (
     <div>
-        <Login/>
+        <Routes/>
     </div>
 );
 

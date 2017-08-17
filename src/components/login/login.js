@@ -12,6 +12,7 @@ import Grid from 'material-ui/Grid';
 import Button from 'material-ui/Button';
 import { withStyles, createStyleSheet } from 'material-ui/styles';
 import { FormGroup } from 'material-ui/Form';
+import { Redirect } from 'react-router-dom';
 
 const styleSheet = createStyleSheet(() => ({
     grid: {
@@ -30,15 +31,26 @@ const styleSheet = createStyleSheet(() => ({
 }));
 
 class Login extends Component {
+
+    constructor() {
+        super();
+        this.handleOnClick = this.handleOnClick.bind(this);
+    }
+
     state = {
-        rememberMeChecked: false
+        homeRedirect: false
     };
 
-    handleChange = name => (event, checked) => {
-        this.setState({[name]: checked});
+    handleOnClick = () => {
+        this.setState({
+            homeRedirect: true
+        });
     };
 
     render() {
+        if (this.state.homeRedirect) {
+            return <Redirect push to="/home"/>;
+        }
         return (
             <FormGroup>
                 <Grid container
@@ -66,6 +78,7 @@ class Login extends Component {
                         raised
                         color="primary"
                         className={this.props.classes.loginBtn}
+                        onClick={this.handleOnClick}
                     >
                         Submit
                     </Button>

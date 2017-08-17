@@ -7,9 +7,13 @@
 /* Dependency Imports */
 import React from 'react';
 
+/* Custom Imports */
+import AdminNavBar from './../common/admin-navbar';
+
 const Users = () => {
     return (
         <div>
+            <AdminNavBar/>
             Users
         </div>
     );
